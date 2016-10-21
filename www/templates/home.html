@@ -1,0 +1,40 @@
+<ion-view view-title="Latest">
+  <!-- do you want padding? -->
+  <ion-content class="padding light-gray-bg" ng-show="isLoaded">
+
+    <div class="list ">
+      <div class="post" ng-repeat="post in posts track by $index">
+        <div class=" card desh-atom-card-4">
+
+          <!-- clickable contents - navigate to post view -->
+          <div ng-click="viewPost(post)">
+            <div class="item item-thumbnail-left item-text-wrap no-side-padding">
+              <img class="desh-atom-card desh-atom-card desh-atom-thumb small" src="{{post.avatar}}" />
+              <p class="post-header">
+                <b class="post-title"> {{post.title}} </b>
+                <b class="author">{{post.author}} </b>
+                <small class="time"> {{post.datetime}} </small>
+              </p>
+            </div>
+            <p class="post-description" ng-bind-html="post.shortContent"></p>
+          </div>
+
+          <!-- footer -->
+          <p class="post-footer ">
+            <a class="subdued" ng-class="{'liked': post.like}" ng-click="post.like = !post.like">
+              <span class="animated badge">
+             <i class="animated icon ion-thumbsup"></i>
+           </span> Like
+            </a>
+            <a class="subdued "><b>{{post.commentCount}} </b >Comments</a>
+            <a class="subdued"><i class="icon ion-android-share"></i> Share</a>
+            <a class="subdued bookmark">
+              <i class="animated icon ion-bookmark" ng-class="{'marked': post.bookmarked}" ng-click="post.bookmarked = !post.bookmarked"></i>
+            </a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

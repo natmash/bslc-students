@@ -1,0 +1,17 @@
+<ion-view view-title="Events">
+  <ion-content class="padding light-gray-bg" ng-show="isLoaded">
+    <div class="list">
+      <div class="post" ng-repeat="event in events track by $index">
+        <div class=" card desh-atom-card-4">
+          <div class="item item-text-wrap no-side-padding">
+            <p class="post-header">
+              <b class="post-title">{{event.title}}</b>
+              <small class="time">{{event.datetime}}</small>
+            </p>
+          </div>
+          <p class="post-description" ng-bind-html="event.details"></p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

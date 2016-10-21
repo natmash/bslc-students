@@ -1,0 +1,41 @@
+"data":{
+  "groups":{
+     "group1"{
+            "group_name":"Administrators",
+            "group_description":"Users who can do anything!",
+            "no_of_users":2,
+            "users":{
+                "user1": {
+                    "username":"mnash",
+                    "full_name":"Matt Nash",
+                    "created_at":"Oct 16 2015",
+                },
+                "user2": {
+                    "username":"snash",
+                    "full_name":"Stacy Nash",
+                    "created_at":"Oct 16 2016"
+                }
+            }
+        },
+     "group2"{
+            "group_name":"Volunteers",
+            "group_description":"Users who can only moderate!",
+            "no_of_users":1,
+            "users":{
+                "user1": {
+                    "username":"john",
+                    "full_name":"John Vincent",
+                    "created_at":"9th Feb 2015"
+                }
+            },
+            ,
+            "updates": {
+                    "update2":{
+                        "update_text":"Users should expect blackout tomorrow!",
+                        "created_at":"19th Feb 2015",
+                        "sent_by":"user1"
+                }
+            }
+        }
+    }
+}

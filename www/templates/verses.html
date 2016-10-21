@@ -1,0 +1,18 @@
+<ion-view view-title="Daily Verses">
+  <ion-content class="padding light-gray-bg" ng-show="isLoaded">
+    <div class="list">
+      <div class="post" ng-repeat="verse in verses track by $index">
+        <div class=" card desh-atom-card-4">
+
+          <div class="item item-text-wrap no-side-padding">
+            <p class="post-header">
+              <b class="post-title">{{verse.title}}</b>
+              <small class="time">{{verse.datetime}}</small>
+            </p>
+          </div>
+          <p class="post-description" ng-bind-html="verse.content"></p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

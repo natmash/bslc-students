@@ -1,0 +1,68 @@
+<ion-view view-title="Praises/Prayers">
+  <ion-tabs>
+    <ion-tab title="Praises">
+      <ion-content class="padding light-gray-bg" ng-show="isLoaded">
+        <div class="list">
+          <div class="post" ng-repeat="prayer in prayers track by $index">
+            <div class=" card desh-atom-card-4">
+
+              <!-- clickable contents - navigate to post view -->
+              <div ng-click="viewPost(prayer)">
+                <div class="item item-text-wrap no-side-padding">
+                  <p class="post-header">
+                    <b class="post-title">{{prayer.anonymous ? 'Someone' : prayer.person}} is shouting out praise!</b>
+                    <small class="time">{{prayer.datetime}}</small>
+                  </p>
+                </div>
+                <p class="post-description" ng-bind-html="prayer.content"></p>
+              </div>
+
+              <!-- footer -->
+              <p class="post-footer ">
+                <!--
+                <a class="subdued" ng-class="{'liked': post.like}" ng-click="prayer.like = !.like">
+                  <span class="animated badge">
+                 <i class="animated icon ion-heart"></i>
+               </span> Like
+                </a>-->
+                <a class="subdued "><i class="icon ion-heart"></i><b>{{prayer.commentCount}} </b>Praising</a>
+                <a class="subdued"><i class="icon ion-reply"></i>Reply</a>
+              </p>
+            </div>
+          </div>
+      </ion-content>
+      <ion-tab title="Prayers">
+        <ion-content class="padding light-gray-bg" ng-show="isLoaded">
+          <div class="list">
+            <div class="post" ng-repeat="prayer in prayers track by $index">
+              <div class=" card desh-atom-card-4">
+
+                <!-- clickable contents - navigate to post view -->
+                <div ng-click="viewPost(prayer)">
+                  <div class="item item-text-wrap no-side-padding">
+                    <p class="post-header">
+                      <b class="post-title">{{prayer.anonymous ? 'Someone' : prayer.person}} is asking for
+                        prayers...</b>
+                      <small class="time">{{prayer.datetime}}</small>
+                    </p>
+                  </div>
+                  <p class="post-description" ng-bind-html="prayer.content"></p>
+                </div>
+
+                <!-- footer -->
+                <p class="post-footer ">
+                  <!--
+                  <a class="subdued" ng-class="{'liked': post.like}" ng-click="prayer.like = !.like">
+                    <span class="animated badge">
+                   <i class="animated icon ion-heart"></i>
+                 </span> Like
+                  </a>-->
+                  <a class="subdued "><i class="icon ion-heart-broken"></i><b>{{prayer.commentCount}} </b>Praying</a>
+                  <a class="subdued"><i class="icon ion-reply"></i>Reply</a>
+                </p>
+              </div>
+            </div>
+        </ion-content>
+      </ion-tab>
+  </ion-tabs>
+</ion-view>

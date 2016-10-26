@@ -42,7 +42,7 @@ angular.module('main', [
     $sceDelegateProvider.resourceUrlWhitelist(['self', new RegExp('^(http[s]?):\/\/(w{3}.)?youtube\.com/.+$')]);
 
     // ROUTING with ui.router
-    $urlRouterProvider.otherwise('/walk');
+    $urlRouterProvider.otherwise('/authLogin');
     $stateProvider
     // this state is placed in the <ion-nav-view> in the index.html
       .state('main', {

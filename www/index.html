@@ -15,21 +15,6 @@
           .catch(err => console.log('Error', err));
       }
     </script>-->
-
-
-    <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyB2tEtotwXnyhPfd61NSs-rSPnmIZUWsNc",
-        authDomain: "bslc-students.firebaseapp.com",
-        databaseURL: "https://bslc-students.firebaseio.com",
-        storageBucket: "bslc-students.appspot.com",
-        messagingSenderId: "857188796114"
-      };
-      firebase.initializeApp(config);
-    </script>
-
     <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
     <link href="lib/animate.css/animate.css" rel="stylesheet">
@@ -76,6 +61,23 @@
     <script src="js/controllers/auth-ctrl.js"></script>
     <script src="js/controllers/about-ctrl.js"></script>
     <script src="js/constants/config-const.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase-database.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB2tEtotwXnyhPfd61NSs-rSPnmIZUWsNc",
+        authDomain: "bslc-students.firebaseapp.com",
+        databaseURL: "https://bslc-students.firebaseio.com",
+        storageBucket: "bslc-students.appspot.com",
+        messagingSenderId: "857188796114"
+      };
+      firebase.initializeApp(config);
+    </script>
+
   </head>
 
   <body ng-app="main">

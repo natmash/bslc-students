@@ -10394,7 +10394,7 @@ You can add custom components
 .loading-container .loading {
   background: transparent; }
 
-/* loading view - you can find example from - app/main/template/facebook.html */
+/* loading view - you can find example from - app/main/template/messagelist.html */
 .loading-view {
   background: transparent; }
   .loading-view .spinner svg {

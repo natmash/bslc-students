@@ -129,12 +129,12 @@ angular.module('main', [
           }
         }
       })
-      .state('main.facebook', {
-        url: '/facebook',
+      .state('main.messagelist', {
+        url: '/messages',
         views: {
           'pageContent': {
-            templateUrl: 'templates/facebook.html',
-            controller: 'FacebookCtrl'
+            templateUrl: 'templates/messagelist.html',
+            controller: 'MessageListCtrl'
           }
         }
       })

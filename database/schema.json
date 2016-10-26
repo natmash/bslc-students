@@ -28,14 +28,6 @@
                     "created_at":"9th Feb 2015"
                 }
             },
-            ,
-            "updates": {
-                    "update2":{
-                        "update_text":"Users should expect blackout tomorrow!",
-                        "created_at":"19th Feb 2015",
-                        "sent_by":"user1"
-                }
-            }
-        }
+s        }
     }
 }

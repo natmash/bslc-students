@@ -17,6 +17,7 @@ angular.module('main')
     };
 
     this.getAll = function () {
+      
       return [
         {
           location: [-94.41, 45.12],
